@@ -1,0 +1,76 @@
+﻿5→W
+6→H
+ClrDraw:AxesOff:FnOff 
+Text(0,0,"MARIX v2 - 25.10.2016
+Text(6,0,"von SebiderSushi
+Text(18,0,"2ND:  Pause
+Text(24,0,"MODE:  Dashier
+Text(30,0,"DEL:  Bild löschen
+Text(36,0,"CLEAR:  Beenden
+0→K
+Repeat K
+getKey→K
+End
+ClrDraw
+Repeat K=45
+getKey→K
+If K=0
+Then
+int(rand*int(96/W→C
+int(rand*10→Q
+int(rand*10→Y
+If Q>Y
+Then
+Y→X
+Q→Y
+Else
+Q→X
+End
+If int(rand*2)=0
+Then
+For(P,X,Y)
+"For(M,X,P)
+Text(P*H,C*W,sub("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdeghjknopqrstuvxyz0123456789≤≥<>/+-θ?ß¿%&_…∠αβγδελµρΣστχ",int(rand*87)+1,1
+"End
+End
+Else
+For(P,X,Y)
+Text(P*H,C*W,"    "
+End
+End
+End
+If K=21
+Then
+0→O
+0→P
+Repeat O
+Repeat P
+getKey→P
+End
+If max(P={45,21:1→O
+If P=45:P→K
+If P=23:ClrDraw
+End
+End
+If K=23:ClrDraw
+If K=22
+Then
+ClrDraw
+Text(0,0,"MARIX v2 - 25.10.2016
+Text(6,0,"von SebiderSushi
+Text(18,0,"2ND:  Pause
+Text(24,0,"MODE:  Dashier
+Text(30,0,"DEL:  Bild löschen
+Text(36,0,"CLEAR:  Beenden
+0→O
+Repeat O
+Repeat K
+getKey→K
+End
+If max(K={22,45:1→O
+End
+ClrDraw
+End
+End
+ClrHome:ClrDraw:FnOn :AxesOn 
+DelVar CDelVar HDelVar QDelVar WDelVar XDelVar YDelVar MDelVar PDelVar KDelVar O
